@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zo7-od-7IZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ContinentVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="continentVC" customModule="footbalPlayerPriceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classification by continent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ID-1Q-5Ja">
+                                <rect key="frame" x="30" y="108" width="230" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r1U-3w-MH4">
+                                <rect key="frame" x="0.0" y="152" width="414" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="continentCell" rowHeight="169" id="FuY-QH-pBH" customClass="continentCell" customModule="footbalPlayerPriceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="169"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FuY-QH-pBH" id="uYz-G9-pfE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="europe" translatesAutoresizingMaskIntoConstraints="NO" id="Imz-8p-Nmh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Europe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-UK-Pyu">
+                                                    <rect key="frame" x="155.5" y="59.5" width="103.5" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="LC5-of-cBG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Imz-8p-Nmh" firstAttribute="leading" secondItem="uYz-G9-pfE" secondAttribute="leading" id="1Jy-EI-lSA"/>
+                                                <constraint firstItem="eVz-UK-Pyu" firstAttribute="centerX" secondItem="uYz-G9-pfE" secondAttribute="centerX" id="Aap-mw-Q6E"/>
+                                                <constraint firstItem="Imz-8p-Nmh" firstAttribute="top" secondItem="uYz-G9-pfE" secondAttribute="top" id="RYS-w2-LuF"/>
+                                                <constraint firstAttribute="bottom" secondItem="Imz-8p-Nmh" secondAttribute="bottom" id="Vw7-Cs-rf9"/>
+                                                <constraint firstItem="eVz-UK-Pyu" firstAttribute="centerY" secondItem="uYz-G9-pfE" secondAttribute="centerY" id="Xqw-ol-SDu"/>
+                                                <constraint firstAttribute="trailing" secondItem="Imz-8p-Nmh" secondAttribute="trailing" id="ak2-Du-JXT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="continentImage" destination="Imz-8p-Nmh" id="pVe-73-INN"/>
+                                            <outlet property="continentTitle" destination="eVz-UK-Pyu" id="uTE-ue-ci7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8ID-1Q-5Ja" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="1Kc-Ww-2Nd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r1U-3w-MH4" secondAttribute="trailing" id="5q6-3b-q9V"/>
+                            <constraint firstItem="r1U-3w-MH4" firstAttribute="top" secondItem="8ID-1Q-5Ja" secondAttribute="bottom" constant="20" id="B1H-nE-LO1"/>
+                            <constraint firstAttribute="bottom" secondItem="r1U-3w-MH4" secondAttribute="bottom" id="SWl-AC-efn"/>
+                            <constraint firstItem="r1U-3w-MH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vf6-GN-GKb"/>
+                            <constraint firstItem="8ID-1Q-5Ja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Yys-4g-opA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cVP-Yz-YTF"/>
+                    <connections>
+                        <outlet property="continentTable" destination="r1U-3w-MH4" id="uGf-Nn-5xg"/>
+                        <segue destination="H0A-xg-zeM" kind="show" identifier="goToPlayerVC" id="MHp-w3-CYD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="118.52678571428571"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="dya-38-obc">
+            <objects>
+                <viewController id="H0A-xg-zeM" customClass="PlayerVC" customModule="footbalPlayerPriceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JtT-qt-qBF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-cn-oaB">
+                                <rect key="frame" x="30" y="108" width="90" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-BI-eWn">
+                                <rect key="frame" x="0.0" y="152" width="414" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mqh-eq-oBG">
+                                    <size key="itemSize" width="205" height="265"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCell" id="FOL-WE-kGm" customClass="playerCell" customModule="footbalPlayerPriceApp" customModuleProvider="target">
+                                        <rect key="frame" x="104.5" y="0.0" width="205" height="265"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OYk-qF-qYh">
+                                            <rect key="frame" x="0.0" y="0.0" width="205" height="265"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="son" translatesAutoresizingMaskIntoConstraints="NO" id="Nhc-Gn-9cH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="En7-db-ASS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="손흥민" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-kj-Lmp">
+                                                    <rect key="frame" x="8" y="205" width="189" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="780억원" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGs-K6-5Me">
+                                                    <rect key="frame" x="8" y="234" width="189" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Nhc-Gn-9cH" secondAttribute="trailing" id="A9X-AY-3Ic"/>
+                                                <constraint firstAttribute="trailing" secondItem="e3Q-kj-Lmp" secondAttribute="trailing" constant="8" id="IIc-b5-vVb"/>
+                                                <constraint firstAttribute="trailing" secondItem="DGs-K6-5Me" secondAttribute="trailing" constant="8" id="RH8-it-bRg"/>
+                                                <constraint firstItem="e3Q-kj-Lmp" firstAttribute="top" secondItem="Nhc-Gn-9cH" secondAttribute="bottom" constant="5" id="Ray-a9-Es5"/>
+                                                <constraint firstItem="DGs-K6-5Me" firstAttribute="top" secondItem="e3Q-kj-Lmp" secondAttribute="bottom" constant="5" id="TL4-3R-Kpz"/>
+                                                <constraint firstItem="DGs-K6-5Me" firstAttribute="leading" secondItem="OYk-qF-qYh" secondAttribute="leading" constant="8" id="Yp4-45-mcr"/>
+                                                <constraint firstItem="Nhc-Gn-9cH" firstAttribute="top" secondItem="OYk-qF-qYh" secondAttribute="top" id="rUx-6h-EfC"/>
+                                                <constraint firstItem="Nhc-Gn-9cH" firstAttribute="leading" secondItem="OYk-qF-qYh" secondAttribute="leading" id="wfU-h2-2XW"/>
+                                                <constraint firstItem="e3Q-kj-Lmp" firstAttribute="leading" secondItem="OYk-qF-qYh" secondAttribute="leading" constant="8" id="yA5-Pq-YZK"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="205" height="265"/>
+                                        <connections>
+                                            <outlet property="playerImage" destination="Nhc-Gn-9cH" id="A3q-gR-UWX"/>
+                                            <outlet property="playerName" destination="e3Q-kj-Lmp" id="zj0-38-seP"/>
+                                            <outlet property="playerPrice" destination="DGs-K6-5Me" id="VDv-M0-HsW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UPG-Wp-rau"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gsz-BI-eWn" firstAttribute="top" secondItem="Vow-cn-oaB" secondAttribute="bottom" constant="20" id="1m0-ZF-n0v"/>
+                            <constraint firstItem="Vow-cn-oaB" firstAttribute="top" secondItem="UPG-Wp-rau" secondAttribute="top" constant="20" id="JCN-eC-FY3"/>
+                            <constraint firstItem="Vow-cn-oaB" firstAttribute="leading" secondItem="UPG-Wp-rau" secondAttribute="leading" constant="30" id="WAy-dE-1p1"/>
+                            <constraint firstAttribute="bottom" secondItem="gsz-BI-eWn" secondAttribute="bottom" id="YTj-Qs-IiV"/>
+                            <constraint firstItem="UPG-Wp-rau" firstAttribute="trailing" secondItem="gsz-BI-eWn" secondAttribute="trailing" id="aG7-cM-zYM"/>
+                            <constraint firstItem="gsz-BI-eWn" firstAttribute="leading" secondItem="UPG-Wp-rau" secondAttribute="leading" id="vAH-qA-5WS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hOn-4v-xsR"/>
+                    <connections>
+                        <outlet property="playersView" destination="gsz-BI-eWn" id="dou-DC-bs4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVI-SL-8iO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505.7971014492755" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hFp-ta-4WA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zo7-od-7IZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DmD-aI-aCy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CDQ-Qe-Ykn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k41-Hm-Zvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="europe" width="4000" height="2783"/>
+        <image name="son" width="250" height="279"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
